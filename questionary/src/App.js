@@ -13,30 +13,30 @@ function App() {
       ]
     },
     {
-      questionText: 'What is the capital of USA ?',
+      questionText: 'In this holiday ghosts and witches come out...',
       answerOptions: [
-        { answerText: 'Boston', isCorrect: false },
-        { answerText: 'Washington', isCorrect: true },
-        { answerText: 'New York', isCorrect: false },
-        { answerText: 'Los Angeles', isCorrect: false },
+        { answerText: 'St. Valentine', isCorrect: false },
+        { answerText: 'New Year', isCorrect: false },
+        { answerText: 'Halloween', isCorrect: true },
+        { answerText: 'Independence Day', isCorrect: false },
       ]
     },
     {
-      questionText: 'What is the capital of USA ?',
+      questionText: 'In what month do we celebrate Women’s Day?',
       answerOptions: [
-        { answerText: 'Boston', isCorrect: false },
-        { answerText: 'Washington', isCorrect: true },
-        { answerText: 'New York', isCorrect: false },
-        { answerText: 'Los Angeles', isCorrect: false },
+        { answerText: 'May', isCorrect: false },
+        { answerText: 'March', isCorrect: true },
+        { answerText: 'September', isCorrect: false },
+        { answerText: 'June', isCorrect: false },
       ]
     },
     {
-      questionText: 'What is the capital of USA ?',
+      questionText: 'When did Ukrainian adopt the Declaration of State Sovereignty?',
       answerOptions: [
-        { answerText: 'Boston', isCorrect: false },
-        { answerText: 'Washington', isCorrect: true },
-        { answerText: 'New York', isCorrect: false },
-        { answerText: 'Los Angeles', isCorrect: false },
+        { answerText: 'in June, 1990', isCorrect: false },
+        { answerText: 'in August, 1990', isCorrect: false },
+        { answerText: 'in March, 1990', isCorrect: false },
+        { answerText: 'in July, 1990', isCorrect: true },
       ]
     },
 
@@ -61,8 +61,8 @@ function App() {
     }
   }
 
-  const refresh= () => {
-    setCurrentQuestion (0)
+  const refresh = () => {
+    setCurrentQuestion(0)
     setScore(0)
     setShowScore(false)
   }
@@ -70,15 +70,14 @@ function App() {
 
   return (
     <div className="app">
-
       {
         showScore
           ? <div className='section_score'>
             <div>Correct answers {score} from {questions.length}</div>
-            <button 
+            <button
               className='refresh_btn'
               onClick={refresh}
-              >Try again ...</button>
+            >Try again ...</button>
           </div>
 
           : <div className='quizz'>
